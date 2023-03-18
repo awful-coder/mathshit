@@ -1,4 +1,5 @@
 site_name: MATHv SHiT!!1\
+repo_url: https://github.com/awful-coder/mathshit
 copyright: >
   <a href="https://creativecommons.org/licenses/by/4.0/legalcode">hi im kyle and here is a link to CC-BY 4 which im licensing this entire thing under so maybe follow it (no pun intended)</a>
 
@@ -48,7 +49,6 @@ theme:
   features:
     - search.highlight
     - search.share
-    - navigation.instant
     - toc.integrate
     - toc.follow
     - navigation.top
