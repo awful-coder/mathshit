@@ -3,7 +3,11 @@ copyright: >
   <a href="https://creativecommons.org/licenses/by/4.0/legalcode">hi im kyle and here is a link to CC-BY 4 which im licensing this entire thing under so maybe follow it (no pun intended)</a>
 
 markdown_extensions:
-  - markdown.extensions.smarty:
+  - pymdownx.critic
+  - pymdownx.details
+  - md_in_html
+  - admonition
+  - markdown.extensions.smarty
   - pymdownx.arithmatex:
       generic: true
   - toc:
@@ -25,6 +29,7 @@ theme:
   logo: assets/logo.svg
   favicon: assets/favicon.svg
   name: material
+  custom_dir: docs/overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: lime
@@ -45,3 +50,6 @@ theme:
     - search.share
     - navigation.instant
     - toc.integrate
+    - toc.follow
+    - navigation.top
+

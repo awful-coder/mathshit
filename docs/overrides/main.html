@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    {{ super() }}
+    <!--lol not like this is getting any contributions-->
+    <h2 id="blame">
+        blame
+        <a class="headerlink" href="#blame" title="Permanent link">§</a>
+    </h2>
+    {% macro print_author(author) %}
+        <a href="mailto:{{ author.email }}" title="{{ author.name }}">{{ author.name }}</a> (contributed {{ author.contribution }} {{ author.last_datetime }})
+    {% endmacro %}
+    {% if git_info %}
+        {% set authors = git_info.get('page_authors') %}
+        blame
+        {%- for author in authors[0:-1] -%}
+            {{ " " }}{{ print_author(author) }} and
+        {%- endfor -%}
+        {{ " " }}{{ print_author(authors[-1]) }}
+    {% endif %}
+{% endblock content %}

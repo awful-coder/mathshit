@@ -1,4 +1,5 @@
 # completing the square
+
 i cant really imagine not understanding this but just in case heres a thing
 
 ## but first, a message from basic factoring
@@ -6,7 +7,7 @@ so if you evaluated $(x+y)^2$ you'd notice that it's equal to $x^2+2xy+y^2$.
 
 now if you have a quadratic equation like
 
-$$x^2+6x+9=1$$
+$$x^2+6x+9=1\text{. SOLVE FOR }x\text{!!!! *mean teacher face*}$$
 
 then you can do
 

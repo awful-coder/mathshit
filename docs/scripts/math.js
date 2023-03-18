@@ -12,23 +12,19 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-(function () {
-    'use strict';
+'use strict';
 
-    function katexMath() {
-        if (katex) {
-            const maths = document.getElementsByClassName("arithmatex");
+document.addEventListener("DOMContentLoaded", () => {
+    if (katex) {
+        const maths = document.getElementsByClassName("arithmatex");
 
-            for (var i = 0; i < maths.length; i++) {
-                const tex = maths[i].textContent || maths[i].innerText;
-                if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-                    katex.render(tex.slice(2, -2), maths[i], { 'displayMode': false });
-                } else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-                    katex.render(tex.slice(2, -2), maths[i], { 'displayMode': true });
-                }
+        for (var i = 0; i < maths.length; i++) {
+            const tex = maths[i].textContent || maths[i].innerText;
+            if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
+                katex.render(tex.slice(2, -2), maths[i], { 'displayMode': false });
+            } else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
+                katex.render(tex.slice(2, -2), maths[i], { 'displayMode': true });
             }
         }
     }
-
-    document.addEventListener("DOMContentLoaded", katexMath);
-}());
+});
