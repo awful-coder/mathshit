@@ -20,7 +20,7 @@ plugins:
   - search:
       lang: en
   - awesome-pages
-  - git-authors
+#  - git-authors
 
 extra_css:
   - https://material-tufte.ale.sh/stylesheets/tufte-sidebars.css
@@ -30,7 +30,7 @@ theme:
   logo: assets/logo.svg
   favicon: assets/favicon.svg
   name: material
-  custom_dir: docs/overrides
+  #custom_dir: docs/overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: lime

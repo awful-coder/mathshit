@@ -7,7 +7,7 @@ name = "pypi"
 mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-awesome-pages-plugin = "*"
-mkdocs-git-authors-plugin = "*"
+#mkdocs-git-authors-plugin = "*"
 
 [dev-packages]
 djlint = "*"

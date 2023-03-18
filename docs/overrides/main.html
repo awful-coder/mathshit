@@ -11,10 +11,12 @@
     {% endmacro %}
     {% if git_info %}
         {% set authors = git_info.get('page_authors') %}
+        {% if authors %}
         blame
         {%- for author in authors[0:-1] -%}
             {{ " " }}{{ print_author(author) }} and
         {%- endfor -%}
-        {{ " " }}{{ print_author(authors[-1]) }}
+            {{ " " }}{{ print_author(authors[-1]) }}
+        {% endif %}
     {% endif %}
 {% endblock content %}
