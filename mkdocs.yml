@@ -1,0 +1,47 @@
+site_name: MATHv SHiT!!1\
+copyright: >
+  <a href="https://creativecommons.org/licenses/by/4.0/legalcode">hi im kyle and here is a link to CC-BY 4 which im licensing this entire thing under so maybe follow it (no pun intended)</a>
+
+markdown_extensions:
+  - markdown.extensions.smarty:
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: "&sect;"
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js
+  - scripts/math.js
+plugins:
+  - search:
+      lang: en
+  - awesome-pages
+  - git-authors
+
+extra_css:
+  - https://material-tufte.ale.sh/stylesheets/tufte-sidebars.css
+  - stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css
+theme:
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: lime
+      toggle:
+        icon: material/brightness-7
+
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: STIX Two Text
+
+  features:
+    - search.highlight
+    - search.share
+    - navigation.instant
+    - toc.integrate
